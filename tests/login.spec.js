@@ -1,27 +1,21 @@
-import {test, expect} from '@playwright/test';
+import { test, expect } from '@playwright/test';
 
-test('login authorized user', async ({browser}) => {
+test('login authorized user', async ({ browser }) => {
     const context = await browser.newContext();
     const page = await context.newPage();
 
-    await page.goto ('https://jeterp-staging.jetruby.cloud/');
+    await page.goto('https://jeterp-staging.jetruby.cloud/');
 
-    const [KeycloakPage] = await Promise.all([
-        context.waitForEvent('page'),
-        page.click('text=Continue with SSO')
-    ]);
+    await page.click('text=Continue with SSO');
 
-    await KeycloakPage.waitForLoadState();
+    await page.waitForSelector('input[name="username"]');
 
-    await KeycloakPage.waitForSelector('input[name="username"]');
+    await page.fill('input[name="username"]', 'erp.test+employee@jetruby.com');
+    await page.fill('input[name="password"]', 'ERPtest123!');
 
-    await KeycloakPage.fill('input[name="username"]', 'erp.test+employee@jetruby.com');
-    await KeycloakPage.fill ('input[name="password"]', 'ERPtest123!');
+    await page.click('input[type="submit"][value="Sign In"]');
 
-    await Promise.all([
-        page.waitForNavigation(),
-        page.click('text=Sign in')
-    ]);
+    await page.waitForSelector('text=/forms/i', { timeout: 10000 });
 
-    await expect (KeycloakPage.locator('text=Forms')).toBeVisible();
+    await expect(page.locator('h1.mb-6')).toContainText('Forms');
 });
