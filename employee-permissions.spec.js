@@ -21,6 +21,23 @@ test.describe('Permissions for employee', () => {
     await expect(sharedPage.locator('h1')).toContainText('Calendar');
   });
 
+  test('Open Time tracking', async () => {
+    await sharedPage.click('a[data-tooltip-content="Time tracking"]');
+    await expect(sharedPage.locator('h1')).toContainText('Time tracking');
+  });
+
+  test('Open Payslips', async () => {
+    await sharedPage.click('a[data-tooltip-content="Payslips"]');
+    await expect(sharedPage.locator('h1')).toContainText('Payslips');
+  });
+
+  test('Open Settings', async () => {
+    await sharedPage.click('a[data-tooltip-content="Settings"]');
+    await expect(sharedPage.locator('.text-xl.font-bold.text-black')).toContainText(
+      'Language settings',
+    );
+  });
+
   test.afterAll(async () => {
     if (sharedPage) {
       await sharedPage.context().close();
