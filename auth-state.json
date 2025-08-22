@@ -1,0 +1,95 @@
+{
+  "cookies": [
+    {
+      "name": "AUTH_SESSION_ID_LEGACY",
+      "value": "aa6226fe-1907-40b0-b6a2-582194e8910d.keycloak-0-49373",
+      "domain": "keycloak.jetruby.cloud",
+      "path": "/realms/master/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "AUTH_SESSION_ID",
+      "value": "aa6226fe-1907-40b0-b6a2-582194e8910d.keycloak-0-49373",
+      "domain": "keycloak.jetruby.cloud",
+      "path": "/realms/master/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "KEYCLOAK_IDENTITY",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI3MmRjMzA1OS04ZjY4LTQwODgtODBmNy0yOGVmMDkxNzczM2UifQ.eyJleHAiOjE3NTYwNTAwNzMsImlhdCI6MTc1NTg3NzI3MywianRpIjoiODdlZTc5YmUtNWJmMC00YjYwLWJmMzQtNmNjZTg1ZGM1ZmQ5IiwiaXNzIjoiaHR0cHM6Ly9rZXljbG9hay5qZXRydWJ5LmNsb3VkL3JlYWxtcy9tYXN0ZXIiLCJzdWIiOiIyNzQxMGUyNi05NDY5LTQ5MjktOTM4Zi05ZjAxZjRiMjg1MjkiLCJ0eXAiOiJTZXJpYWxpemVkLUlEIiwic2Vzc2lvbl9zdGF0ZSI6ImFhNjIyNmZlLTE5MDctNDBiMC1iNmEyLTU4MjE5NGU4OTEwZCIsInNpZCI6ImFhNjIyNmZlLTE5MDctNDBiMC1iNmEyLTU4MjE5NGU4OTEwZCIsInN0YXRlX2NoZWNrZXIiOiJOcm9zb0J1a0ltMXptZi1YVGFheFhkMFdtQ08yWWhSb0hzMmozRDFaOFJJIn0.u4-2iWKbFlcIiarI63MdqNijRbCIQCNFnXAEIUq9YFc",
+      "domain": "keycloak.jetruby.cloud",
+      "path": "/realms/master/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "KEYCLOAK_SESSION",
+      "value": "master/27410e26-9469-4929-938f-9f01f4b28529/aa6226fe-1907-40b0-b6a2-582194e8910d",
+      "domain": "keycloak.jetruby.cloud",
+      "path": "/realms/master/",
+      "expires": 1756050073.906046,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "KEYCLOAK_IDENTITY_LEGACY",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI3MmRjMzA1OS04ZjY4LTQwODgtODBmNy0yOGVmMDkxNzczM2UifQ.eyJleHAiOjE3NTYwNTAwNzMsImlhdCI6MTc1NTg3NzI3MywianRpIjoiODdlZTc5YmUtNWJmMC00YjYwLWJmMzQtNmNjZTg1ZGM1ZmQ5IiwiaXNzIjoiaHR0cHM6Ly9rZXljbG9hay5qZXRydWJ5LmNsb3VkL3JlYWxtcy9tYXN0ZXIiLCJzdWIiOiIyNzQxMGUyNi05NDY5LTQ5MjktOTM4Zi05ZjAxZjRiMjg1MjkiLCJ0eXAiOiJTZXJpYWxpemVkLUlEIiwic2Vzc2lvbl9zdGF0ZSI6ImFhNjIyNmZlLTE5MDctNDBiMC1iNmEyLTU4MjE5NGU4OTEwZCIsInNpZCI6ImFhNjIyNmZlLTE5MDctNDBiMC1iNmEyLTU4MjE5NGU4OTEwZCIsInN0YXRlX2NoZWNrZXIiOiJOcm9zb0J1a0ltMXptZi1YVGFheFhkMFdtQ08yWWhSb0hzMmozRDFaOFJJIn0.u4-2iWKbFlcIiarI63MdqNijRbCIQCNFnXAEIUq9YFc",
+      "domain": "keycloak.jetruby.cloud",
+      "path": "/realms/master/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "KEYCLOAK_SESSION_LEGACY",
+      "value": "master/27410e26-9469-4929-938f-9f01f4b28529/aa6226fe-1907-40b0-b6a2-582194e8910d",
+      "domain": "keycloak.jetruby.cloud",
+      "path": "/realms/master/",
+      "expires": 1756050073.906086,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "jeterp_production",
+      "value": "e479b2ccd961cf083066b46344da7e8f",
+      "domain": ".jetruby.cloud",
+      "path": "/",
+      "expires": 1755963674.131415,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "token",
+      "value": "5b7IzJtkj%2FIl11zVQBZaecbXskTqxRXEyvKtdD7gCBJlekiu1P9wcJnfCnrTlJvTgHS8LHM1hHsyPSWu764r1k1F9%2Fh%2BvlsYjx4gJGi%2BYbxIU4lu3JR5ubW4%2F6UWLQjq1%2BrXZvhuWuDoIwaEe%2Fim4KwlpTjYm%2Fw7aa25k6TkLqLGr1dnxctqllEvzcmgi4dbAGmDWwy5fw1qnytw7hYSgfBa%2BYjwWoSIvIggKCvukIwAEdXSqx6ZZjUyJ1d8GPZx01yo4Pk%2FWVIl88z2upU%3D--CM9hKXTVLXgIo1gE--5Lg24DyNV%2BY31WeIE2kPtA%3D%3D",
+      "domain": ".jetruby.cloud",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://jeterp-staging.jetruby.cloud",
+      "localStorage": [
+        {
+          "name": "NRBA_SESSION",
+          "value": "{\"value\":\"d2a9db281d49d8f7\",\"inactiveAt\":1755879072847,\"expiresAt\":1755891672847,\"updatedAt\":1755877274510,\"sessionReplayMode\":0,\"sessionReplaySentFirstChunk\":false,\"sessionTraceMode\":1,\"traceHarvestStarted\":true,\"loggingMode\":3,\"serverTimeDiff\":-134,\"custom\":{},\"numOfResets\":0}"
+        }
+      ]
+    }
+  ]
+}
