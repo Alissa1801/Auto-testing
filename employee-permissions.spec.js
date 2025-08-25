@@ -33,9 +33,7 @@ test.describe('Permissions for employee', () => {
 
   test('Open Settings', async () => {
     await sharedPage.click('a[data-tooltip-content="Settings"]');
-    await expect(sharedPage.locator('.text-xl.font-bold.text-black')).toContainText(
-      'Language settings',
-    );
+    await expect(sharedPage.locator('button:has-text("Save settings")')).toBeVisible();
   });
 
   test.afterAll(async () => {
