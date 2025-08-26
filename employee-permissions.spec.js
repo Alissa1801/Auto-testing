@@ -36,6 +36,39 @@ test.describe('Permissions for employee', () => {
     await expect(sharedPage.locator('button:has-text("Save settings")')).toBeVisible();
   });
 
+  test('Open Contact us', async () => {
+    const newPagePromise = sharedPage.context().waitForEvent('page');
+    await sharedPage.click('a[data-tooltip-content="Contact us"]');
+    const newPage = await newPagePromise;
+    await newPage.waitForLoadState('networkidle');
+    try {
+      await expect(newPage.locator('text=Forms').first()).toBeVisible({ timeout: 5000 });
+    } catch (error) {
+      await expect(newPage.locator('body')).toContainText('Forms', { timeout: 3000 });
+    }
+
+    await newPage.close();
+  });
+
+  test('Open Guidelines', async () => {
+    const newPagePromise = sharedPage.context().waitForEvent('page');
+    await sharedPage.click('a[data-tooltip-content="Guidelines"]');
+    const newPage = await newPagePromise;
+    await newPage.waitForLoadState('networkidle');
+    try {
+      await expect(newPage.locator('text=Wiki').first()).toBeVisible({ timeout: 5000 });
+    } catch (error) {
+      await expect(newPage.locator('body')).toContainText('Wiki', { timeout: 3000 });
+    }
+
+    await newPage.close();
+  });
+
+  test('Open Profile', async () => {
+    await sharedPage.click('a.flex[href="/profile"]');
+    await expect(sharedPage.locator('h1')).toContainText('Profile');
+  });
+
   test.afterAll(async () => {
     if (sharedPage) {
       await sharedPage.context().close();
