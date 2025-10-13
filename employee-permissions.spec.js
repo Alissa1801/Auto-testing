@@ -14,6 +14,13 @@ test.describe('Permissions for employee', () => {
     await sharedPage.fill('input[name="password"]', 'ERPtest123!');
     await sharedPage.click('input[type="submit"][value="Sign In"]');
     await sharedPage.waitForSelector('text=Forms', { timeout: 10000 });
+
+    sharedPage.on('response', async (response) => {
+      if (response.url().includes('/api/') && response.status() >= 400) {
+        const body = await response.text();
+        console.error(`❌ Ошибка ${response.status()} на ${response.url()}\n${body}`);
+      }
+    });
   });
 
   test('Open Calendar', async () => {
@@ -70,8 +77,6 @@ test.describe('Permissions for employee', () => {
   });
 
   test.afterAll(async () => {
-    if (sharedPage) {
-      await sharedPage.context().close();
-    }
+    await sharedPage.context().close();
   });
 });
