@@ -3,8 +3,27 @@
     "playwright": "^1.53.2"
   },
   "devDependencies": {
-    "@playwright/test": "^1.53.2",
+    "@playwright/test": "^1.56.1",
     "@types/node": "^24.0.10"
   },
-  "scripts": {}
+  "scripts": {},
+  "name": "my-playwright-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "contractor-permissions.spec.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alissa1801/Auto-testing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Alissa1801/Auto-testing/issues"
+  },
+  "homepage": "https://github.com/Alissa1801/Auto-testing#readme"
 }

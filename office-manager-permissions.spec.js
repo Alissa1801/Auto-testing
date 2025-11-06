@@ -1,16 +1,16 @@
 import { test, expect } from '@playwright/test';
 
-let sharedPage;
+test.describe('Permissions for employee', () => {
+  let sharedPage;
 
-test.describe('Permissions for Contractor', () => {
-  test('Authorization', async ({ browser }) => {
+  test.beforeAll(async ({ browser }) => {
     const context = await browser.newContext();
     sharedPage = await context.newPage();
 
     await sharedPage.goto('https://jeterp-staging.jetruby.cloud/');
     await sharedPage.click('text=Continue with SSO');
     await sharedPage.waitForSelector('input[name="username"]');
-    await sharedPage.fill('input[name="username"]', 'erp.test+contractor@jetruby.com');
+    await sharedPage.fill('input[name="username"]', 'erp.test+om.cdg@jetruby.com');
     await sharedPage.fill('input[name="password"]', 'ERPtest123!');
     await sharedPage.click('input[type="submit"][value="Sign In"]');
     await sharedPage.waitForSelector('text=Forms', { timeout: 10000 });
@@ -53,7 +53,6 @@ test.describe('Permissions for Contractor', () => {
     } catch (error) {
       await expect(newPage.locator('body')).toContainText('Forms', { timeout: 3000 });
     }
-
     await newPage.close();
   });
 
@@ -67,7 +66,6 @@ test.describe('Permissions for Contractor', () => {
     } catch (error) {
       await expect(newPage.locator('body')).toContainText('Wiki', { timeout: 3000 });
     }
-
     await newPage.close();
   });
 
@@ -76,7 +74,16 @@ test.describe('Permissions for Contractor', () => {
     await expect(sharedPage.locator('h1')).toContainText('Profile');
   });
 
+  test('Open Personnel Accounting', async () => {
+    await sharedPage.click('button[data-tooltip-content="Staff Management"]');
+    await sharedPage.waitForSelector('ul[data-headlessui-state="open"]');
+    await sharedPage.click('a[href="/staff_management/personnel_accounting"]');
+    await expect(sharedPage.locator('h1')).toContainText('Personnel Accounting');
+  });
+
   test.afterAll(async () => {
-    await sharedPage.context().close();
+    if (sharedPage) {
+      await sharedPage.context().close();
+    }
   });
 });
