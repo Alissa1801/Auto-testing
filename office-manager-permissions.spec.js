@@ -81,6 +81,20 @@ test.describe('Permissions for employee', () => {
     await expect(sharedPage.locator('h1')).toContainText('Personnel Accounting');
   });
 
+  test('Open Office manager', async () => {
+    await sharedPage.click('button[data-tooltip-content="Staff Management"]');
+    await sharedPage.waitForSelector('ul[data-headlessui-state="open"]');
+    await sharedPage.click('a[href="/staff_management/om"]');
+    await expect(sharedPage.locator('h1')).toContainText('Office manager');
+  });
+
+  test('Open Analytics by unused vacations', async () => {
+    await sharedPage.click('button[data-tooltip-content="Staff Management"]');
+    await sharedPage.waitForSelector('ul[data-headlessui-state="open"]');
+    await sharedPage.click('a[href="/staff_management/va"]');
+    await expect(sharedPage.locator('h1')).toContainText('Analytics by unused vacations');
+  });
+
   test.afterAll(async () => {
     if (sharedPage) {
       await sharedPage.context().close();
